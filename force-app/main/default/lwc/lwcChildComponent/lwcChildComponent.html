@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="LWC Child Component">
+        {welcomeNote};
+        <lightning-checkbox-group name="Checkbox_Group"
+       
+        label="Student Name"
+        options={options}
+        value={value}
+        onchange={handleChange}
+        >    
+    </lightning-checkbox-group>
+
+<p>Selected Values are: {selectedValues}</p>
+    
+</lightning-card>
+
+</template>

@@ -1,0 +1,26 @@
+<template>
+    <lightning-card  title={cardTitle}>
+    <lightning-input label="Enter Your Name" onchange={updateTitle}></lightning-input>
+    <template if:true={showRed}>
+    <div style="background-color: red; padding-left:20px;" class="card" >
+        {cardTitle}; 
+    </div>
+    </template>
+  
+<template if:false={showRed}>
+    <div style="background-color: yellow; padding-left:20px;" class="card" >
+        {cardTitle}{cp1};
+    </div>
+</template>
+
+<template for:each={students} for:item="student"> 
+ <p key={student}>{cardTitle}--------{student}</p>
+</template>
+
+  
+<template iterator:it={students}>
+    <p key={it.value}>{cardTitle}--------{student}</p>
+</template>
+
+</lightning-card>
+</template>
