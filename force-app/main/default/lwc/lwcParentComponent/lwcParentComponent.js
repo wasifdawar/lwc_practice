@@ -2,6 +2,7 @@ import { LightningElement } from 'lwc';
 
 export default class LwcParentComponent extends LightningElement {
     childNote = "Hello Wasif ";
+    students ='';
 
     
     handleStudentNames(event)  
@@ -10,5 +11,10 @@ export default class LwcParentComponent extends LightningElement {
         const childComp = this.template.querySelector('c-lwc-child-component');
         childComp.updateValues(studentNames); 
           }
+
+     updateStudents(event) 
+     {
+        this.students = event.detail;
+     }    
 
 }

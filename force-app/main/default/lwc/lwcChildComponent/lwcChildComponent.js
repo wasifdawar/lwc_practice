@@ -28,6 +28,8 @@ export default class LwcChildComponent extends LightningElement {
        {
            this.value = event.detail.value;
            let studentNames = this.value.join(',');
+           const parentInputBox = new CustomEvent('updatestudentname',{detail:studentNames});
+           this.dispatchEvent(parentInputBox);
        }
 
     }
