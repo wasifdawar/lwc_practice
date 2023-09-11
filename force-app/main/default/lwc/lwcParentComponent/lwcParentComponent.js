@@ -19,7 +19,7 @@ export default class LwcParentComponent extends LightningElement {
         childComp.updateValues(studentNames); 
           }
 
-     constructor()
+     constructor()    //Question: Why we use this constructor
      {
         super();
      }

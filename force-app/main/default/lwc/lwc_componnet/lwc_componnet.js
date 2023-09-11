@@ -6,10 +6,13 @@ export default class Lwc_componnet extends LightningElement {
     @track cardTitle = 'My First Component';
     @track textvalue;
     //showRed = true;
-
-    
     @wire(CurrentPageReference)
     pageRef;
+
+    disconnectedCallback()
+    {
+        unregisterAllListeners(this);
+    }
 
     connectedCallback()
     {

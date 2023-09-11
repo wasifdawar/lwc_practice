@@ -22,13 +22,13 @@ export default class LwcChildComponent extends LightningElement {
         @api updateValues(studentNames)      // Data come as string format like 
                                        // Wasif,kalyani,Lucky
         {                   
-            this.value = studentNames.split(',');
+            this.value = studentNames.split(',`');
         }
         handleChange(event)
        {
            this.value = event.detail.value;
            let studentNames = this.value.join(',');
-           const parentInputBox = new CustomEvent('updatestudentname',{detail:studentNames});
+           const parentInputBox = new CustomEvent('updatestudentname',{detail:studentNames}); //Question?
            this.dispatchEvent(parentInputBox);
        }
 
