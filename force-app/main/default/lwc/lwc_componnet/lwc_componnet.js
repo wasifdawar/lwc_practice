@@ -1,8 +1,25 @@
-import { LightningElement } from 'lwc';
+import { LightningElement,track,wire } from 'lwc';
+import { registerListener } from 'c/pubsub';
+import {CurrentPageReference} from 'lightning/navigation';
 
 export default class Lwc_componnet extends LightningElement {
-    cardTitle = 'My First Component';
+    @track cardTitle = 'My First Component';
+    @track textvalue;
     //showRed = true;
+
+    
+    @wire(CurrentPageReference)
+    pageRef;
+
+    connectedCallback()
+    {
+        registerListener('pubsubhit',this.updateValue,this); 
+    }
+
+    updateValue(names )
+    {
+        this.textvalue = names;
+    }
 
     students = ['Sherin','Wasif', 'Kalyani', 'Lucky', 'Vinay','Abhishek','Renu'];
 

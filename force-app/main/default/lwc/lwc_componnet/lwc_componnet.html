@@ -1,6 +1,6 @@
 <template>
     <lightning-card  title={cardTitle}>
-    <lightning-input label="Enter Your Name" onchange={updateTitle}></lightning-input>
+    <lightning-input label="Enter Your Name" value={textvalue} onchange={updateTitle} ></lightning-input>
     <template if:true={showRed}>
     <div style="background-color: red; padding-left:20px;" class="card" >
         {cardTitle}; 
