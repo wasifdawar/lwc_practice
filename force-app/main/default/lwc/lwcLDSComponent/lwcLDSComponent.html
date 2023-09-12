@@ -3,9 +3,9 @@
         <lightning-layout>
         <lightning-layout-item size="6">
             <lightning-card title="Create New Account">
-             <lightning-input name="AccountName" label="Enter Account Name"></lightning-input>
-             <lightning-input name="AccountName" label="Enter Account Name"></lightning-input>
-             <lightning-button lable="Create Account"></lightning-button>
+             <lightning-input name="accountName" label="Enter Account Name" onchange={handleAccountDetails}></lightning-input>
+             <lightning-input name="accountPhone" label="Enter Phone Name" onchange={handleAccountDetails}></lightning-input>
+             <lightning-button label="Create Account" onclick={handleAccountClick}></lightning-button>
             </lightning-card>
         </lightning-layout-item>
         </lightning-layout>
