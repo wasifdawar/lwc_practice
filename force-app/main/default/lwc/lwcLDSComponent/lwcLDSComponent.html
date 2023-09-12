@@ -8,6 +8,14 @@
              <lightning-button label="Create Account" onclick={handleAccountClick}></lightning-button>
             </lightning-card>
         </lightning-layout-item>
+        <lightning-layout-item size="6">
+            <lightning-card title="View Account Details">
+                <template if:true={isAccountLoaded}>
+                {accName}<br/>{accPhone}
+                </template>
+                </lightning-card>
+                </lightning-layout-item>
+        
         </lightning-layout>
     </lightning-card>
 </template>
