@@ -15,8 +15,8 @@ export default class LwcLDSComponent extends LightningElement {
      get isAccountLoaded() 
      {
         if(this.accountRecord.data)
-        return true;
-    return false;
+            return true;
+        return false;
      }    
      
      get accName()
