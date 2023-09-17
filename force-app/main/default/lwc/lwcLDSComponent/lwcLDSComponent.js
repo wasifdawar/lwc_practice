@@ -1,7 +1,7 @@
 import { LightningElement,wire,api} from 'lwc';
 import { createRecord, getRecord  } from 'lightning/uiRecordApi';   
 
-
+const fieldArray = ['Account.Name','Account.Phone'];
 export default class LwcLDSComponent extends LightningElement {
     accountName;
     accountPhone;
@@ -47,7 +47,7 @@ export default class LwcLDSComponent extends LightningElement {
     {
         console.log("this.accountName ------>"+this.accountName);
         console.log("this.accountPhone ------>"+this.accountPhone);
-        console.log("this.accountRecord ------>"+accountRecord);
+        console.log("this.accountRecord ------>"+this.accountRecord);
 
         let  fields = 
         {
